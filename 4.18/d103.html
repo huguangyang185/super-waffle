@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <button id="h1" onclick="h3()">将三个盒子颜色变红</button>
+    <button id="h2" onclick="h4()">还原</button>
+    <div ></div>
+    <div ></div>
+    <div ></div>
+</body>
+<script>
+    // var h =document.getElementById("h1")
+    var g =document.getElementsByTagName("div")
+    alert(g.length)
+    console.log(g);
+     function h3(){
+        // g.style.backgroundColor="red"
+        for(var i=0;i<g.length;i++){
+            g[i].style.backgroundColor="red"
+        }
+
+    }
+    function h4(){
+        // g.style.backgroundColor="red"
+        for(var i=0;i<g.length;i++){
+            g[i].style.backgroundColor="aqua"
+        }
+
+    }
+
+</script>
+</html>

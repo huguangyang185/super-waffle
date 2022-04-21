@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.b{
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #000;
+}
+.box{
+    padding: 10px;
+    /* text-align: left; */
+    height: 200px;
+    width: 200px;
+    border: 1px solid #000;
+    float: left;
+    display: none;
+}
+/* button{
+   display: none;
+} */
+</style>
+<body>
+    <div class="b"id="b1" >弹出层</div>
+    <div id="g" class="box">
+        <button onclick="y()">关闭</button>
+    </div>
+</body>
+<script>
+var hgy =document.getElementById("g")
+var hgy1 =document.getElementsByTagName("button")[0]
+var b =document.getElementById("b1")
+b.onclick = function() {
+    // console.log(1);
+    hgy.style.display='block'
+    hgy1.style.display='block'
+
+}
+function y(){
+    hgy.style.display='none'
+    hgy1.style.display='none'
+}
+</script>
+</html>

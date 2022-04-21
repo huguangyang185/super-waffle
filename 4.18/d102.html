@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #h2 {
+        width: 100px;
+        height: 100px;
+        background-color: #999;
+    }
+</style>
+
+<body>
+    <div id="h1">
+        <button onclick="g1()">变高</button>
+        <button onclick="g2()">变宽</button>
+        <button onclick="g3()">变色</button>
+        <button onclick="g4()">隐藏</button>
+        <button onclick="g5()">重置</button>
+    </div>
+    <div id="h2"></div>
+</body>
+<script>
+    var hgy = document.getElementById("h2")
+    function g1() {
+        hgy.style.height="200px"
+    }
+    function g2() {
+        hgy.style.width="200px"
+    }
+    function g3() {
+        hgy.style.backgroundColor="green"
+    }
+    function g4() {
+        hgy.style.visibility="hidden"
+    }
+    function g5() {
+        hgy.style.cssText="width: 100px height: 100px background-color: #999"
+    }
+</script>
+
+</html>
