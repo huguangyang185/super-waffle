@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <ul>
+            <li><input type="checkbox"><span class="p">全选</span> <span class="fx">反选</span></li>
+            <li><input type="checkbox">选项一</li>
+            <li><input type="checkbox">选项二</li>
+            <li><input type="checkbox">选项三</li>
+            <li><input type="checkbox">选项四</li>
+            <li><input type="checkbox">选项五</li>
+            <li><input type="checkbox">选项六</li>
+            <li><input type="checkbox">选项七</li>
+            <li><input type="checkbox">选项八</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var it = document.querySelectorAll('input')
+    var sp=document.querySelector('.fx')
+    var p=document.querySelector('.p')
+    function change(a){
+        a=!a
+    }
+   sp.onclick=function(){
+        for(var a=1;a<it.length;a++){
+            it[a].checked=!it[a].checked
+        }
+
+   }
+    for (var i = 0; i < it.length; i++) {
+
+        it[i].index = i
+        it[0].onclick = function () {
+            console.log(this.checked);
+            if (this.checked == true) {
+                for (var j = 0; j < it.length; j++) {
+                    it[j].checked = true
+                    p.innerHTML='全不选'
+                }
+            } else {
+                for (var j = 0; j < it.length; j++) {
+                    it[j].checked = false
+                    p.innerHTML='全选'
+                }
+            }
+
+
+        }
+        it[i].onclick=function(){
+            if(this.checked==true){
+                for (var j = 0; j < it.length; j++) {
+                    it[0].checked = true
+
+                }
+            }else{
+                for (var j = 0; j < it.length; j++) {
+                    it[0].checked = false
+
+                }
+            }
+           
+        }
+
+    }
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        width: 100px;
+        padding: 10px;
+        border-radius: 5px;
+        margin: auto;
+        border: 1px solid #000;
+    }
+
+    ul {
+        width: 100px;
+
+    }
+
+    li:nth-child(1) {
+        border-bottom: 1px solid #000;
+    }
+
+    li {
+        width: 100px;
+        list-style: none;
+        line-height: 30px;
+
+    }
+</style>

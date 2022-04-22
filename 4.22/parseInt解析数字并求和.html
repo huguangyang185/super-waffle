@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"> + <input type="text"> = <span>?</span> <button>求和</button>
+</body>
+
+</html>
+<script>
+    var ip = document.querySelectorAll('input')
+    var btn = document.querySelector('button')
+    var sp=document.querySelector('span')
+    ip[0].onkeyup=function(){
+      
+            this.value=this.value.replace(/[^\d|","]/,"")
+        
+    }
+    ip[1].onkeyup=function(){
+        this.value=this.value.replace(/[^\d|","]/,"")
+    }
+    btn.onclick = function () {
+      
+        var a = 0;
+        console.log(ip[0].value);
+        console.log(ip[1].value);
+        a += parseInt(ip[0].value)
+        a+=parseInt(ip[1].value)
+        console.log(a);
+        sp.innerHTML=a
+
+    }
+</script>
+<style>
+    body {
+        text-align: center;
+    }
+</style>
