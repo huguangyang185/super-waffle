@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img class="img" src="./img//1.png" alt="">
+    <img class="img" src="./img//2.png" alt="">
+    <img class="img" src="./img//3.png" alt="">
+    <img class="img" src="./img//4.png" alt="">
+    <img class="active" src="./img//5.png" alt="">
+</body>
+<script>
+    var img = document.querySelectorAll('.img')
+    var active = document.querySelector('.active')
+
+    for (var i = 0; i < img.length; i++) {
+        img[i].onmouseover = function () {
+            active.src = this.src
+            active.style.display = "block"
+        }
+        this.onmouseout = function () {
+            active.style.display = "none"
+        }
+    }
+    document.onmouseover = function (e) {
+
+        active.style.top = e.clientY + 'px'
+        active.style.left = e.clientX + 'px'
+
+    }
+</script>
+
+</html>
+<style>
+    body {
+        text-align: center;
+        position: relative;
+    }
+
+    .active {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 200px;
+        height: 200px;
+    }
+
+    img {
+        border: 1px solid #000;
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+    }
+</style>

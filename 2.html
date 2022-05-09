@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+
+        <p>请选择游戏名称</p>
+        <button>搜索</button>
+    </div>
+    <ul>
+        <li>王者荣耀</li>
+        <li>时空猎人</li>
+        <li>保卫萝卜</li>
+        <li>英雄联盟</li>
+        <li>和平精英</li>
+    </ul>
+</body>
+<script>
+    var p = document.querySelector('p')
+    var li = document.querySelectorAll('li')
+    var ul = document.querySelector('ul')
+    p.onclick = function () {
+        ul.style.display = 'block'
+    }
+    for (var i = 0; i < li.length; i++) {
+        li[i].onmouseover = function () {
+            this.style.backgroundColor = 'blue'
+        }
+        li[i].onmouseout = function () {
+            this.style.backgroundColor = ''
+        }
+        li[i].onclick = function () {
+            p.innerHTML = this.innerHTML
+            ul.style.display = 'none'
+        }
+    }
+</script>
+
+</html>
+<style>
+    body {
+        background-color: #eee;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid #000; */
+
+    }
+
+    p {
+        width: 200px;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+
+
+
+    button {
+        margin-left: 20px;
+        height: 24px;
+        width: 80px;
+    }
+
+    ul {
+        padding: 0;
+        border: 1px solid #000;
+        position: absolute;
+        top: 36px;
+        left: 42%;
+        display: none;
+    }
+
+    li {
+        list-style: none;
+        cursor: pointer;
+    }
+</style>

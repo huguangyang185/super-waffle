@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button>无用</button>
+        <button>绑定click事件</button>
+        <button>解除绑定</button>
+    </div>
+</body>
+<script>
+    var btn = document.querySelectorAll('button')
+    var flag = false
+    btn[0].onclick = function () {
+        if (flag) {
+            btn[0].innerHTML = '我可以点击了'
+            alert('事件绑定成功')
+
+
+        } else {
+            btn[0].innerHTML = '无用'
+
+        }
+    }
+    btn[1].onclick = function () {
+        flag = true
+    }
+    btn[2].onclick = function () {
+
+        flag = false
+        btn[0].innerHTML = '无用'
+    }
+</script>
+
+</html>
+<style>
+    div {
+        text-align: center;
+    }
+</style>
