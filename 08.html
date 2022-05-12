@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      /* 思路:一个长方形设置圆角,然后我使用了affter微元素添加了一个三角形使用定位实现效果 */
+      div {
+        width: 100px;
+        height: 50px;
+        background-color: yellow;
+        border-radius: 10px;
+      }
+
+      div::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        position: absolute;
+        left: -10px;
+        top: 22px;
+        border-right: 10px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

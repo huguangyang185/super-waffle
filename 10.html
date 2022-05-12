@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      /* 思路一个圆形,下面两个使用css三角形加旋转即可实现效果 */
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+        border-radius: 50%;
+      }
+
+      .bottom {
+        width: 0;
+        height: 0;
+        border-bottom: 90px solid yellow;
+        border-right: 90px solid transparent;
+        position: absolute;
+        transform: rotate(96deg);
+        top: 180px;
+        left: 50px;
+      }
+
+      .bottom1 {
+        width: 0;
+        height: 0;
+        border-bottom: 90px solid yellow;
+        border-left: 90px solid transparent;
+        position: absolute;
+        transform: rotate(-96deg);
+        top: 180px;
+        left: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="bottom"></div>
+    <div class="bottom1"></div>
+  </body>
+</html>

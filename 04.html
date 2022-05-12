@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      /* 思路:使用两个盒子,一个盒子要下边框一个盒子要上边框即可实现 */
+      .box {
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-bottom: 20px solid yellow;
+      }
+
+      .box1 {
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-top: 90px solid yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box1"></div>
+  </body>
+</html>

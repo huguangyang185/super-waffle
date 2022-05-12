@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      /* 思路:一个盒子设置宽高,这里我使用了after和before伪元素结合旋转定位实现效果 */
+      div {
+        width: 100px;
+        height: 100px;
+        position: relative;
+      }
+
+      div::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 10px;
+        background-color: yellow;
+        transform: rotate(90deg);
+        position: absolute;
+        top: 50px;
+      }
+
+      div::before {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 10px;
+        background-color: yellow;
+        position: absolute;
+        top: 50%;
+        /* transform: rotate(90deg); */
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
